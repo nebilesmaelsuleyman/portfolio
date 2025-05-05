@@ -851,3 +851,245 @@ nav {
 		height: 60px;
 	}
 }
+
+.page4 {
+	min-height: 100vh;
+	padding: 5rem 5%;
+	background: linear-gradient(135deg, #052852 0%, #121212 100%);
+	color: white;
+	position: relative;
+	overflow: hidden;
+}
+
+.contact-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	gap: 3rem;
+}
+
+.contact-content {
+	flex: 1;
+	z-index: 2;
+}
+
+.contact-title {
+	font-size: 3.5rem;
+	margin-bottom: 2rem;
+	line-height: 1.2;
+	background: linear-gradient(90deg, #ffffff 0%, #4caf50 100%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: fadeInUp 1s ease-out;
+}
+
+.highlight {
+	text-shadow: 0 0 15px rgba(76, 175, 80, 0.7);
+}
+
+.contact-messages {
+	margin-bottom: 3rem;
+}
+
+.message-line {
+	font-size: 1.5rem;
+	font-weight: 400;
+	margin-bottom: 1.5rem;
+	opacity: 0;
+	transform: translateX(-20px);
+	animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.message-line:nth-child(1) {
+	animation-delay: 0.3s;
+}
+.message-line:nth-child(2) {
+	animation-delay: 0.6s;
+}
+.message-line:nth-child(3) {
+	animation-delay: 0.9s;
+}
+
+.cta-box {
+	background: rgba(255, 255, 255, 0.05);
+	backdrop-filter: blur(10px);
+	border-radius: 15px;
+	padding: 2rem;
+	border: 1px solid rgba(76, 175, 80, 0.3);
+	margin-bottom: 3rem;
+	transform: scale(0.95);
+	transition: all 0.5s ease;
+}
+
+.cta-box:hover {
+	transform: scale(1);
+	box-shadow: 0 10px 30px rgba(76, 175, 80, 0.2);
+}
+
+.cta-box p {
+	font-size: 1.2rem;
+	margin-bottom: 1.5rem;
+	line-height: 1.6;
+}
+
+.contact-btn {
+	display: inline-block;
+	background: #4caf50;
+	color: white;
+	padding: 12px 30px;
+	border-radius: 50px;
+	font-size: 1.1rem;
+	font-weight: 500;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	border: 2px solid transparent;
+}
+
+.contact-btn:hover {
+	background: transparent;
+	border-color: #4caf50;
+	transform: translateY(-3px);
+	box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+}
+
+.social-links {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+	background: #4caf50;
+	transform: translateY(-5px) scale(1.1);
+}
+
+.social-icon img {
+	width: 60%;
+	height: 60%;
+	filter: brightness(0) invert(1);
+}
+
+.contact-decoration {
+	flex: 1;
+	position: relative;
+	min-height: 400px;
+	opacity: 0;
+	animation: fadeIn 1s ease-out 0.5s forwards;
+}
+
+.code-bubble {
+	position: absolute;
+	background: rgba(76, 175, 80, 0.1);
+	border: 1px solid rgba(76, 175, 80, 0.3);
+	border-radius: 15px;
+	padding: 15px 20px;
+	font-family: 'Courier New', monospace;
+	font-size: 0.9rem;
+	backdrop-filter: blur(5px);
+}
+
+.code-bubble:nth-child(1) {
+	top: 10%;
+	right: 5%;
+	animation: float 6s ease-in-out infinite;
+}
+
+.code-bubble:nth-child(2) {
+	top: 40%;
+	left: 10%;
+	animation: float 7s ease-in-out infinite 1s;
+}
+
+.code-bubble:nth-child(3) {
+	bottom: 10%;
+	right: 15%;
+	animation: float 5s ease-in-out infinite 0.5s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeInRight {
+	from {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes float {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+	.contact-container {
+		flex-direction: column;
+	}
+
+	.contact-title {
+		font-size: 2.5rem;
+	}
+
+	.contact-decoration {
+		min-height: 200px;
+		width: 100%;
+		margin-top: 3rem;
+	}
+}
+
+@media (max-width: 576px) {
+	.contact-title {
+		font-size: 2rem;
+	}
+
+	.message-line {
+		font-size: 1.2rem;
+	}
+
+	.social-icon {
+		width: 40px;
+		height: 40px;
+	}
+}
