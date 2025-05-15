@@ -294,8 +294,8 @@ section:first-of-type {
 }
 
 .tech-orb.nest {
-	background: url('https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nestjs/nestjs-plain.svg')
-		center/60% no-repeat rgba(76, 175, 80, 0.1);
+	background: url('img/nest-js-icon.png') center/60% no-repeat
+		rgba(76, 175, 80, 0.1);
 	top: 70%;
 	right: -5%;
 	animation-delay: 0.9s;
